@@ -21,14 +21,12 @@ jobs:
 
       - name: Test
         run: |
-          echo ${{ github.head_ref }}
-          echo ${{ github.base_ref }}
-          echo ${{ github.ref }}
+          echo "HEAD: " ${{ github.head_ref }}
+          echo "BASE: " ${{ github.base_ref }}
+          echo "REF: " ${{ github.ref }}
 
       - name: Install lib dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false # Better for building libraries
+        run: yarn install
 
       - name: Set Git credentials
         run: |
