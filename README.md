@@ -1,6 +1,6 @@
 # react-native-test-version-bump
 
-A description. Test this! Test this twice.
+A description. Test this! Test this twice. Third.
 
 ## Installation
 
