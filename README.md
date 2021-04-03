@@ -1,7 +1,7 @@
 # react-native-test-version-bump
 
 A description
-1234567
+12345678
 
 ## Installation
 
