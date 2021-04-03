@@ -20,7 +20,10 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Test
-        run: echo ${{ github.head_ref }}
+        run: |
+          echo ${{ github.head_ref }}
+          echo ${{ github.base_ref }}
+          echo ${{ github.ref }}
 
       - name: Install lib dependencies
         uses: bahmutov/npm-install@v1
