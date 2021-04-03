@@ -20,9 +20,7 @@ jobs:
           persist-credentials: false
 
       - name: Install lib dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false # Better for building libraries
+        run: yarn install
 
       - name: Set Git credentials
         run: |
