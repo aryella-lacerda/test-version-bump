@@ -2,7 +2,7 @@ on:
   pull_request:
     branches:
       - master
-    types: [closed]
+    types: [opened, edited]
 
 jobs:
   release:
@@ -19,11 +19,10 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
 
-      - name: Test
+      - name: Show branches
         run: |
           echo "HEAD: " ${{ github.head_ref }}
           echo "BASE: " ${{ github.base_ref }}
-          echo "REF: " ${{ github.ref }}
 
       - name: Install lib dependencies
         run: yarn install
